@@ -1,0 +1,12 @@
+Depends on what stack I'm working but usually it's:
+
+* coc-yank 1.2.1 ~/.config/coc/extensions/node_modules/coc-yank                                                                                                                               
+* coc-prettier 9.3.1 ~/.config/coc/extensions/node_modules/coc-prettier
+* coc-html 1.8.0 ~/.config/coc/extensions/node_modules/coc-html
+* coc-highlight 2.0.4 ~/.config/coc/extensions/node_modules/coc-highlight
+* coc-emmet 1.1.6 ~/.config/coc/extensions/node_modules/coc-emmet
++ coc-vetur 1.2.5 ~/.config/coc/extensions/node_modules/coc-vetur
++ coc-tsserver 2.1.0 ~/.config/coc/extensions/node_modules/coc-tsserver
++ coc-tslint-plugin 1.2.0 ~/.config/coc/extensions/node_modules/coc-tslint-plugin
++ coc-json 1.8.0 ~/.config/coc/extensions/node_modules/coc-json
++ coc-css 2.0.0 ~/.config/coc/extensions/node_modules/coc-css
