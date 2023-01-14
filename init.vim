@@ -1,4 +1,4 @@
-file path: ~/.config/nvim/init.vim 
+"file path: ~/.config/nvim/init.vim 
 
 set wildmenu
 set wildmode=longest,list,full
