@@ -10,3 +10,4 @@ Depends on what stack I'm working but usually it's:
 + coc-tslint-plugin 1.2.0 ~/.config/coc/extensions/node_modules/coc-tslint-plugin
 + coc-json 1.8.0 ~/.config/coc/extensions/node_modules/coc-json
 + coc-css 2.0.0 ~/.config/coc/extensions/node_modules/coc-css
+* coc-go 1.3.0 ~/.config/coc/extensions/node_modules/coc-go
