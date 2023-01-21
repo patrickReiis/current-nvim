@@ -1,3 +1,4 @@
+{  
   "languageserver": {
     "golang": {
       "command": "gopls",
@@ -8,3 +9,4 @@
       }
     }
   }
+}
