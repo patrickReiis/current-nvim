@@ -5,6 +5,7 @@ set number
 set termguicolors
 set foldmethod=syntax
 set cursorline
+set showcmd
 
 " Having longer updatetime (default is 4000 ms = 4s) leads to noticeable
 " delays and poor user experience
