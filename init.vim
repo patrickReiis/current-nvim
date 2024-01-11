@@ -20,6 +20,9 @@ let g:go_auto_type_info = 1
 "reference: https://github.com/fatih/vim-go/blob/master/doc/vim-go.txt
 let g:go_updatetime = 0
 
+" Automatically format the current file on save
+autocmd BufWritePre *.vue :CocCommand prettier.formatFile
+
 nmap <M-Right> :vertical resize +1<CR>
 nmap <M-Left> :vertical resize -1<CR>
 nmap <M-Down> :resize +1<CR>
@@ -60,7 +63,10 @@ au BufNewFile,BufRead *.ts setlocal filetype=typescript
 au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
 " == AUTOCMD END ================================
 
-:set tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
+" for go development: 
+:set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
+" for anything that needs 2 spaces as indentation
+":set tabstop=4 softtabstop=0 expandtab shiftwidth=2 smarttab
 
 " my current preferred theme
 color minimalist
