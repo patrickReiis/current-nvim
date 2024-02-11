@@ -33,7 +33,7 @@ nmap <M-Up> :resize -1<CR>
 call plug#begin('~/.vim/plugged')
 "------------------------ COC ------------------------
 " coc for tslinting, auto complete and prettier
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " coc extensions
 let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier']
 "------------------------ VIM TSX ------------------------
@@ -70,3 +70,9 @@ au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
 
 " my current preferred theme
 color minimalist
+
+" highlight yank text
+augroup highlight_yank
+    autocmd!
+    au TextYankPost * silent! lua vim.highlight.on_yank({higroup="IncSearch", timeout=700})
+augroup END
