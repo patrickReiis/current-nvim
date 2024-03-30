@@ -1,12 +1,25 @@
-{  
-  "languageserver": {
-    "golang": {
-      "command": "gopls",
-      "rootPatterns": ["go.work", "go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"],
-      "initializationOptions": {
-        "usePlaceholders": true
+{
+    "diagnostic.displayByAle": true,
+    "deno.inlayHints.functionLikeReturnTypes.enabled": true,
+    "diagnostic.checkCurrentLine": true,
+    "inlayHint.enable": true,
+    "inlayHint.display": true,
+    "deno.enable": true,
+    "deno.inlayHints.variableTypes.enabled": true,
+    "deno.inlayHints.enumMemberValues.enabled": true,
+    "deno.inlayHints.parameterNames.enabled": "all",
+    "deno.inlayHints.parameterTypes.enabled": true,
+    "deno.inlayHints.propertyDeclarationTypes.enabled": true,
+    "deno.inlayHints.variableTypes.suppressWhenTypeMatchesName": true,
+    "deno.lint": true,
+    "languageserver": {
+      "golang": {
+        "command": "gopls",
+        "rootPatterns": ["go.work", "go.mod", ".vim/", ".git/", ".hg/"],
+        "filetypes": ["go"],
+        "initializationOptions": {
+          "usePlaceholders": true
+        }
       }
     }
-  }
 }
