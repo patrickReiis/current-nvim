@@ -99,4 +99,17 @@ call ale#linter#Define('typescript', {
 \   'initialization_options': function('ale#handlers#deno#GetInitializationOptions'),
 \})
 
-let g:ale_linters_ignore = {'typescript':['tsserver']}
+"deno stuff
+let g:ale_linters_ignore = {'typescript':['biome', 'cspell', 'eslint', 'tslint', 'standard', 'tsserver', 'typecheck', 'xo']}
+"let g:ale_linters_ignore = {'typescript':['tsserver']}
+let g:ale_lint_delay=100
+" testing
+let b:ale_fixers = ['deno']
+" Set this variable to 1 to fix files when you save them.
+let g:ale_fix_on_save = 1
+" How can I navigate between errors quickly?
+" ALE offers some commands with <Plug> keybinds for moving between warnings and errors quickly. You can map the keys Ctrl+j and Ctrl+k to moving between errors for example:
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+":ALEReset
