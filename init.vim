@@ -83,9 +83,22 @@ augroup highlight_yank
     au TextYankPost * silent! lua vim.highlight.on_yank({higroup="IncSearch", timeout=700})
 augroup END
 
+
+" ------------------- START REACT SETUP
+""  1 - :CocList extensions
+""  2 - Disable 'coc-deno 3.14.0  ~/.config/coc/extensions/node_modules/coc-deno'
+""  3 - Optional: Enable 'coc-tsserver 2.2.0 ~/.config/coc/extensions/node_modules/coc-tsserver'
+"let g:ale_linter_aliases = {'typescriptreact': ['typescript', 'tsx']}
+"let g:ale_linters_ignore = {'typescript':['biome', 'cspell', 'eslint', 'tslint', 'standard', 'deno', 'typecheck', 'xo']}
+"let b:ale_fixers = ['eslint', 'tslint']
+" ------------------- END REACT SETUP
+
+
+" ------------------- START DENO SETUP
+"  1 - :CocList extensions
+"  2 - Enable 'coc-deno 3.14.0  ~/.config/coc/extensions/node_modules/coc-deno'
+"  3 - Disable 'coc-tsserver 2.2.0 ~/.config/coc/extensions/node_modules/coc-tsserver'
 let g:ale_deno_executable = 'deno'
-
-
 " Author: Mohammed Chelouti - https://github.com/motato1
 "         Arnold Chand <creativenull@outlook.com>
 " Description: Deno lsp linter for TypeScript files.
@@ -99,17 +112,19 @@ call ale#linter#Define('typescript', {
 \   'initialization_options': function('ale#handlers#deno#GetInitializationOptions'),
 \})
 
-"deno stuff
 let g:ale_linters_ignore = {'typescript':['biome', 'cspell', 'eslint', 'tslint', 'standard', 'tsserver', 'typecheck', 'xo']}
-"let g:ale_linters_ignore = {'typescript':['tsserver']}
-let g:ale_lint_delay=100
-" testing
 let b:ale_fixers = ['deno']
-" Set this variable to 1 to fix files when you save them.
-let g:ale_fix_on_save = 1
-" How can I navigate between errors quickly?
+" ------------------- END DENO SETUP
+
+
+
 " ALE offers some commands with <Plug> keybinds for moving between warnings and errors quickly. You can map the keys Ctrl+j and Ctrl+k to moving between errors for example:
+" The 2 lines above define keybinds for ALE, it allows to switch between errors messages
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
-":ALEReset
+" Sets a delay for the messages, the default is too slow
+let g:ale_lint_delay=100
+
+" Call a fixer when saving, run :ALEFixSuggest
+let g:ale_fix_on_save = 1
