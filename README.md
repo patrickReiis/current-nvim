@@ -1,11 +1,15 @@
 # current-nvim
 My current nvim config
 
-Path to nvim folder:
-```~/.config/nvim/```
+Path to nvim folder:  
+```
+cd ~/.config/nvim/
+```
 
 Path to vim folder:
-```~/.vim/```
+```
+cd ~/.vim/
+```
 
 Inside this nvim folder, it should have the following files:
 - coc-settings.json
