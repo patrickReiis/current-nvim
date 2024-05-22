@@ -6,6 +6,11 @@ Path to nvim folder:
 cd ~/.config/nvim/
 ```
 
+Open init.vim:  
+```
+nvim ~/.config/nvim/init.vim
+```
+
 Path to vim folder:
 ```
 cd ~/.vim/
