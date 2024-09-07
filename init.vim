@@ -1,3 +1,8 @@
+" start - search stuff
+:set path=src/** " to use: :find <file>, or :find *<file>* (hit TAB)
+:set wildignorecase
+" end   - search stuff
+
 set wildmenu
 set wildmode=longest,list,full
 
@@ -94,7 +99,7 @@ augroup END
 " ------------------- END REACT SETUP
 
 
-" ------------------- START DENO SETUP
+"" ------------------- START DENO SETUP
 "  1 - :CocList extensions
 "  2 - Enable 'coc-deno 3.14.0  ~/.config/coc/extensions/node_modules/coc-deno'
 "  3 - Disable 'coc-tsserver 2.2.0 ~/.config/coc/extensions/node_modules/coc-tsserver'
@@ -113,7 +118,9 @@ call ale#linter#Define('typescript', {
 \})
 
 let g:ale_linters_ignore = {'typescript':['biome', 'cspell', 'eslint', 'tslint', 'standard', 'tsserver', 'typecheck', 'xo']}
-let b:ale_fixers = ['deno']
+let b:ale_fixers = {'typescript': ['deno']}
+let g:ale_completion_autoimport = 1
+let g:ale_deno_import_map = 'deno.json'
 " ------------------- END DENO SETUP
 
 
@@ -122,6 +129,9 @@ let b:ale_fixers = ['deno']
 " The 2 lines above define keybinds for ALE, it allows to switch between errors messages
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+" should be able to go to implementation - ALE
+nmap <C-]> <Plug>(ale_go_to_implementation)
 
 " Sets a delay for the messages, the default is too slow
 let g:ale_lint_delay=100
