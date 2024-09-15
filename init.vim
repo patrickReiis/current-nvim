@@ -138,3 +138,6 @@ let g:ale_lint_delay=100
 
 " Call a fixer when saving, run :ALEFixSuggest
 let g:ale_fix_on_save = 1
+
+nmap [g <Plug>(coc-git-prevchunk)
+nmap ]g <Plug>(coc-git-nextchunk)
