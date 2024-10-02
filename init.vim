@@ -120,7 +120,7 @@ call ale#linter#Define('typescript', {
 let g:ale_linters_ignore = {'typescript':['biome', 'cspell', 'eslint', 'tslint', 'standard', 'tsserver', 'typecheck', 'xo']}
 let b:ale_fixers = {'typescript': ['deno']}
 let g:ale_completion_autoimport = 1
-let g:ale_deno_import_map = 'deno.json'
+"let g:ale_deno_import_map = 'deno.json'
 " ------------------- END DENO SETUP
 
 
