@@ -12,13 +12,8 @@ set foldmethod=syntax
 set cursorline
 set showcmd
 
-" Having longer updatetime (default is 4000 ms = 4s) leads to noticeable
-" delays and poor user experience
-set updatetime=300
-
 " display variable type
 let g:go_auto_type_info = 1
-
 
 "Use this option to configure the delay until it starts some jobs (see
 "|'g:go_auto_type_info'|, |'g:go_auto_sameids'|). If set to 0, it uses the
@@ -26,16 +21,12 @@ let g:go_auto_type_info = 1
 "reference: https://github.com/fatih/vim-go/blob/master/doc/vim-go.txt
 let g:go_updatetime = 0
 
-" Automatically format the current file on save
-autocmd BufWritePre *.vue :CocCommand prettier.formatFile
-
 nmap <M-Right> :vertical resize +1<CR>
 nmap <M-Left> :vertical resize -1<CR>
 nmap <M-Down> :resize +1<CR>
 nmap <M-Up> :resize -1<CR>
 
 let g:denops#deno = '/home/winlectro/.deno/bin/deno'
-
 
 " == VIM PLUG ================================
 call plug#begin('~/.vim/plugged')
@@ -120,7 +111,6 @@ call ale#linter#Define('typescript', {
 let g:ale_linters_ignore = {'typescript':['biome', 'cspell', 'eslint', 'tslint', 'standard', 'tsserver', 'typecheck', 'xo']}
 let b:ale_fixers = {'typescript': ['deno']}
 let g:ale_completion_autoimport = 1
-"let g:ale_deno_import_map = 'deno.json'
 " ------------------- END DENO SETUP
 
 
@@ -133,11 +123,11 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " should be able to go to implementation - ALE
 nmap <C-]> <Plug>(ale_go_to_implementation)
 
-" Sets a delay for the messages, the default is too slow
-let g:ale_lint_delay=100
-
 " Call a fixer when saving, run :ALEFixSuggest
 let g:ale_fix_on_save = 1
 
 nmap [g <Plug>(coc-git-prevchunk)
 nmap ]g <Plug>(coc-git-nextchunk)
+
+" should work
+"nmap <C-1> <Plug>(ale_hover)
