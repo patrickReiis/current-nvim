@@ -2,6 +2,10 @@
 :set path=src/** " to use: :find <file>, or :find *<file>* (hit TAB)
 :set wildignorecase
 " end   - search stuff
+"
+" Having longer updatetime (default is 4000 ms = 4s) leads to noticeable
+" delays and poor user experience
+set updatetime=300
 
 set wildmenu
 set wildmode=longest,list,full
