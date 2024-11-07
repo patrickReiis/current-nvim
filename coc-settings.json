@@ -3,7 +3,7 @@
     "deno.inlayHints.functionLikeReturnTypes.enabled": true,
     "diagnostic.checkCurrentLine": true,
     "inlayHint.enable": true,
-    "inlayHint.display": true,
+    "inlayHint.display": false,
     "deno.enable": true,
     "deno.inlayHints.variableTypes.enabled": true,
     "deno.inlayHints.enumMemberValues.enabled": true,
@@ -21,5 +21,7 @@
           "usePlaceholders": true
         }
       }
-    }
+    },
+    "git.enableGutters": true,
+    "coc.preferences.extensionUpdateCheck": "daily"
 }
