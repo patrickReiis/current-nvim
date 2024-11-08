@@ -134,4 +134,4 @@ nmap [g <Plug>(coc-git-prevchunk)
 nmap ]g <Plug>(coc-git-nextchunk)
 
 " should work
-"nmap <C-1> <Plug>(ale_hover)
+nmap [a <Plug>(ale_hover)
