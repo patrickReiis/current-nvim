@@ -23,3 +23,11 @@ call plug#begin()
 Plug 'dense-analysis/ale'
 
 call plug#end()
+
+" ALE offers some commands with <Plug> keybinds for moving between warnings and errors quickly. You can map the keys Ctrl+j and Ctrl+k to moving between errors for example:
+" The 2 lines above define keybinds for ALE, it allows to switch between errors messages
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
+
+" should be able to go to implementation - ALE
+nmap <C-]> <Plug>(ale_go_to_implementation)
