@@ -41,3 +41,5 @@ nmap <C-]> <Plug>(ale_go_to_implementation)
 
 " my current preferred theme
 color minimalist
+
+nmap [a <Plug>(ale_hover)
