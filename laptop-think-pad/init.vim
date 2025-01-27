@@ -22,6 +22,10 @@ call plug#begin()
 " List your plugins here
 Plug 'dense-analysis/ale'
 
+"------------------------ THEME ------------------------
+" most importantly you need a good color scheme to write good code :D
+Plug 'dikiaap/minimalist'
+
 call plug#end()
 
 " ALE offers some commands with <Plug> keybinds for moving between warnings and errors quickly. You can map the keys Ctrl+j and Ctrl+k to moving between errors for example:
