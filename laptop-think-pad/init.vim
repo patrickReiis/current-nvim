@@ -20,6 +20,9 @@ nmap <M-Up> :resize -1<CR>
 call plug#begin()
 
 " List your plugins here
+
+Plug 'leafgarland/typescript-vim'
+
 Plug 'dense-analysis/ale'
 
 "------------------------ THEME ------------------------
@@ -35,3 +38,6 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 " should be able to go to implementation - ALE
 nmap <C-]> <Plug>(ale_go_to_implementation)
+
+" my current preferred theme
+color minimalist
