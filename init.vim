@@ -1,5 +1,5 @@
 " start - search stuff
-:set path=src/** " to use: :find <file>, or :find *<file>* (hit TAB)
+:set path=packages/** " to use: :find <file>, or :find *<file>* (hit TAB)
 :set wildignorecase
 " end   - search stuff
 "
